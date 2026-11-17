@@ -1,0 +1,136 @@
+def <module>():
+  # consts: 0, None, 'MT5Unavailable', 'return', 'deals', 'balance', 'equity', 'now', 'ReadOnlyMT5Adapter', 'info'
+  # names: logging, sys, threading, datetime, timedelta, timezone, zoneinfo, ZoneInfo, typing, Any, app.config, settings, app.market, crypto, app.mt5.execution, MAGIC, ExecutionRefused, break_even_stop, filling_type, plan_demo_order, app.strategy.risk, SymbolSpec, round_price, getLogger, __name__, log, RuntimeError, MT5Unavailable, int, _saved_trade_cap, list, dict, str, float, equity_points, _accra_midnight, ReadOnlyMT5Adapter, _spec, mt5_adapter
+  def MT5Unavailable():
+    # consts: 'MT5Unavailable', None
+    # names: __name__, __module__, __qualname__
+  def _saved_trade_cap():
+    # consts: None, 0, 'max_trades_per_day'
+    # names: app.strategy.store, open_session, saved_limits, int, close
+  def equity_points(deals, balance, equity, now):
+    # consts: 'Walk closed cash from the balance back to the start of the window, then end on live equity.', 2, 0, 'time', 1, 86400, -1, 'equity'
+    # names: sorted, round, float, sum, int, zip, append, len, insert
+    def <lambda>(deal):
+      # consts: None, 'time', 'ticket'
+      # names: int
+    def <listcomp>(.0):
+      # consts: 'type', 0, 0.0, 'profit', 'swap', 'commission', 2
+      # names: int, get, round, float
+  def _accra_midnight():
+    # consts: None, 'Africa/Accra', 0
+    # names: datetime, now, ZoneInfo, int, replace, timestamp
+  def ReadOnlyMT5Adapter():
+    # consts: 'ReadOnlyMT5Adapter', 'return', 'names', 'symbol', 'timeframe', 'count', 'start', 'end', 30, 'days', 0.02, 5.0, 2, 'direction', 'stop', 'scanned_entry', 'scanned_distance', 'expires_at', None, 'risk_fraction', 'reward_multiple', 'max_trades_per_day', 'h1_count', 'h4_count'
+    # names: __name__, __module__, __qualname__, __init__, _module, dict, str, Any, connect, disconnect, status, list, symbols, tick, positions, int, rates, datetime, rates_range, deals, portfolio, float, send_demo_order, protect_open_positions, entries_today, _entries_today_locked, snapshot, bool, uses_public_candles, _uses_public, _from_public, _payload, _require
+    def __init__(self):
+      # consts: None, False
+      # names: _mt5, _initialized, threading, RLock, _lock, _listed
+    def _module(self):
+      # consts: None, 'win32', 'Run the MT5 adapter on Windows with MT5 desktop installed.', 0, 'Install the MetaTrader5 Python package on Windows.'
+      # names: sys, platform, MT5Unavailable, _mt5, MetaTrader5, ImportError
+    def connect(self):
+      # consts: None, False, 'MT5 initialize failed: ', 'Terminal/account unavailable: ', True
+      # names: _module, settings, mt5_terminal_path, strip, _lock, initialize, _initialized, MT5Unavailable, last_error, terminal_info, account_info, shutdown, _listed, clear, _payload
+    def disconnect(self):
+      # consts: None, False, 'read_only'
+      # names: _lock, _mt5, _initialized, shutdown
+    def status(self):
+      # consts: None, False, 'MT5 terminal disconnected or account unavailable.'
+      # names: _lock, _require, terminal_info, account_info, _initialized, MT5Unavailable, _payload
+    def symbols(self, names):
+      # consts: None, False, True, 'public_candles', 'filling_mode', 0
+      # names: _lock, _require, symbol_info, _uses_public, append, bool, visible, int, digits, float, point, trade_contract_size, volume_min, volume_max, volume_step, trade_tick_size, trade_tick_value, getattr
+    def tick(self, symbol):
+      # consts: None, True, 'Could not select ', ': ', 'No tick for '
+      # names: _lock, _require, _uses_public, _from_public, symbol_select, MT5Unavailable, last_error, symbol_info_tick, int, time, float, bid, ask, last, volume
+      def <lambda>():
+        # consts: None
+        # names: crypto, ticker
+    def positions(self):
+      # consts: None, 'Could not read positions: '
+      # names: _lock, _require, positions_get, MT5Unavailable, last_error
+      def <listcomp>(.0):
+        # names: int, ticket, symbol, type, float, volume, price_open, price_current, sl, tp, profit, swap, magic, comment
+    def rates(self, symbol, timeframe, count):
+      # consts: None, 'Only H1 and H4 history are available in this build.', 10, 5000, 'History count must be between 10 and 5000 bars.', 'H1', 16385, 16388, True, 'Could not select ', ': ', 'TIMEFRAME_', 0, 'No ', ' rates for '
+      # names: MT5Unavailable, _lock, _require, _uses_public, _from_public, symbol_select, last_error, copy_rates_from_pos, getattr, len
+      def <lambda>():
+        # consts: None
+        # names: crypto, recent
+      def <listcomp>(.0):
+        # consts: 'time', 'open', 'high', 'low', 'close'
+        # names: int, float
+    def rates_range(self, symbol, timeframe, start, end):
+      # consts: None, 'Only H1 and H4 history are available in this build.', 'The end date is before the start date.', 405, 'Choose a range of 365 days or less.', 'H1', 16385, 16388, True, 'Could not select ', ': ', 'TIMEFRAME_', 0, 'No ', ' candles for ', ' in that date range: '
+      # names: MT5Unavailable, days, astimezone, timezone, utc, replace, _lock, _require, _uses_public, _from_public, symbol_select, last_error, copy_rates_range, getattr, len
+      def <lambda>():
+        # consts: None
+        # names: crypto, range_bars
+      def <listcomp>(.0):
+        # consts: 'time', 'open', 'high', 'low', 'close'
+        # names: int, float
+    def deals(self, days):
+      # consts: None, 1, 365, 'Could not read deal history: '
+      # names: min, max, _lock, _require, datetime, now, history_deals_get, timedelta, MT5Unavailable, last_error
+      def <listcomp>(.0):
+        # names: int, ticket, symbol, type, entry, float, volume, price, profit, swap, commission, magic, time
+    def portfolio(self, days):
+      # consts: None, 0.0, True, 0, 'symbol', 'sl', 1, False, 'type', 'price_current', 'volume', 'margin', 'equity', 'account', 'positions', 'floating_pnl', 2, 'margin_level', 100, 'stop_risk_cash', 'unprotected_positions', 'open_positions', 'history_days', 'history_error', 'closed_trades', 'wins', 'losses', 'net_profit', 'equity_curve', 'balance', 'our_entries_today', 'max_trades_per_day', 'execution', 'environment', 'confirm', 'blocked', 'order_submitted'
+      # names: _lock, status, positions, deals, MT5Unavailable, str, symbols, _spec, float, trade_tick_size, trade_tick_value, sum, get, _accra_midnight, round, len, equity_points, int, datetime, now, timezone, utc, timestamp, _saved_trade_cap
+      def <genexpr>(.0):
+        # consts: 'profit', 'swap', None
+        # names: float
+      def <listcomp>(.0):
+        # consts: 'type', 'entry'
+        # names: 
+      def <listcomp>(.0):
+        # consts: 'magic', 'entry', 0, 'time'
+        # names: MAGIC
+      def <genexpr>(.0):
+        # consts: 'profit', 0, 1, None
+        # names: 
+      def <genexpr>(.0):
+        # consts: 'profit', 0, 1, None
+        # names: 
+      def <genexpr>(.0):
+        # consts: 'profit', 'swap', 'commission', None
+        # names: 
+    def send_demo_order(self):
+      # consts: None, 'MT5 terminal disconnected or account unavailable.', 'environment', 'Orders are sent only on a demo or live account.', ' has no live quote on this terminal.', 'Could not read open positions: ', 'buy', 'trade_allowed', 'direction', 'price', 'stop', 'scanned_entry', 'scanned_distance', 'equity', 'balance', 0, 'spec', 'trades_today', 'position_open', 'now', 'expires_at', 'risk_fraction', 'reward_multiple', 'max_trades_per_day', 'The order was not sent.', 'TRADE_ACTION_DEAL', 1, 'ORDER_TYPE_BUY', 'ORDER_TYPE_SELL', 30, 'H4H1_RR', 'g', 31, 'ORDER_TIME_GTC', 'filling_mode', 'TRADE_RETCODE_DONE', 10009, 'TRADE_RETCODE_DONE_PARTIAL', 10010, 'retcode'
+      # names: _lock, _require, terminal_info, account_info, MT5Unavailable, _payload, get, ExecutionRefused, symbol_info, symbol_info_tick, positions_get, last_error, float, ask, bid, plan_demo_order, bool, _spec, point, trade_tick_size, trade_tick_value, volume_min, volume_max, volume_step, digits, _entries_today_locked, len, datetime, now, timezone, utc, timestamp, getattr, lots, price, stop, target, MAGIC, filling_type, int, order_send, cash_risk, retcode
+    def protect_open_positions(self):
+      # consts: 'Move our stop to entry once floating profit reaches 3.5R.', None, 'MT5 terminal disconnected or account unavailable.', 'environment', 'Could not read positions: ', 0, 'buy', 'sell', '', 'TRADE_ACTION_SLTP', 6, 'TRADE_RETCODE_DONE', 10009, 'TRADE_RETCODE_DONE_PARTIAL', 10010, 'retcode', -1, 'comment', 'Break-even stop was not set for %s ticket %s: %s'
+      # names: _lock, _require, terminal_info, account_info, MT5Unavailable, _payload, get, positions_get, last_error, int, magic, MAGIC, symbol_info, symbol, digits, type, break_even_stop, float, price_open, price_current, sl, tp, str, comment, getattr, ticket, round_price, order_send, log, warning, append
+    def entries_today(self, symbol):
+      # consts: None
+      # names: _lock, _entries_today_locked, _require
+    def _entries_today_locked(self, mt5, symbol):
+      # consts: None, 86400, "Could not verify today's trade count: "
+      # names: _accra_midnight, history_deals_get, datetime, fromtimestamp, now, ExecutionRefused, last_error, sum
+      def <genexpr>(.0):
+        # consts: 0, 1, None
+        # names: str, symbol, upper, int, magic, MAGIC, entry, time
+    def snapshot(self, symbol, h1_count, h4_count):
+      # consts: None, 0, 'H1', 'H4'
+      # names: _lock, _require, status, positions, symbols, tick, rates
+    def uses_public_candles(self, symbol):
+      # consts: None
+      # names: _lock, _uses_public, _require
+    def _uses_public(self, mt5, symbol):
+      # consts: None, False, True, '*'
+      # names: upper, crypto, product, _listed, symbol_info, symbols_get, any
+      def <genexpr>(.0):
+        # consts: None
+        # names: str, name, upper
+    def _from_public(self, load):
+      # consts: None
+      # names: crypto, MarketDataError, MT5Unavailable, str
+    def _payload(self, mt5, terminal, account):
+      # consts: None, 'trade_mode', 'ACCOUNT_TRADE_MODE_DEMO', 0, 'demo', 'ACCOUNT_TRADE_MODE_REAL', 2, 'live', 'ACCOUNT_TRADE_MODE_CONTEST', 1, 'contest', 'unknown', True, 'read_only', 'connected', False, 'name', 'server', 'login', '', 'company', 'currency', 'trade_allowed', 'balance', 0.0, 'equity', 'margin', 'margin_free'
+      # names: getattr, bool, str, float
+    def _require(self):
+      # consts: None, 'MT5 is not connected. Call POST /api/v1/mt5/connect first.', False, 'MT5 connection lost.'
+      # names: _initialized, MT5Unavailable, _module, terminal_info, account_info
+  def _spec(info):
+    # consts: None, 'point', 'trade_tick_size', 'trade_tick_value', 'volume_min', 'volume_max', 'volume_step', 'digits'
+    # names: SymbolSpec, float, int, KeyError, TypeError, ValueError, valid

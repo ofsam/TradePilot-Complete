@@ -1,0 +1,48 @@
+def <module>():
+  # consts: 0, None, 'return', 'db', 'symbol', 'account', 'account_id', 'signal_id', 'action', 'now', 'parameters', 'report', 100, 'limit', 10, 'row', 'result'
+  # names: logging, datetime, time, timedelta, timezone, sqlalchemy, text, sqlalchemy.orm, Session, app.db, SessionLocal, app.models, AuditLog, BacktestRun, Signal, Strategy, TradingAccount, getLogger, __name__, log, open_session, str, int, count_sent_signals, dict, upsert_account, tuple, bool, save_proposal, apply_decision, ensure_default_strategy, reset_default_strategy, save_strategy_parameters, strategy_dict, saved_limits, save_backtest, list, list_signals, list_backtests, signal_dict, mark_submitted
+  def open_session():
+    # consts: None, 'SELECT 1', 'Supabase is unavailable.', True
+    # names: SessionLocal, execute, text, Exception, close, log, warning
+  def count_sent_signals(db, day, symbol):
+    # consts: 'Sent demo or live orders for one symbol on the Ghana day. Saved setups do not count.', 0, 'Africa/Accra', 1, 'submitted'
+    # names: zoneinfo, ZoneInfo, datetime, combine, time, min, timedelta, query, Signal, filter, symbol, status, created_at, count
+  def upsert_account(db, account):
+    # consts: None, 'broker_server', '', 160, 'login', 80, ' ', 'MT5 account', 100, 'environment', 'unknown', 32, 'currency'
+    # names: get, str, query, TradingAccount, filter_by, one_or_none, strip, add, environment, currency, datetime, now, timezone, utc, last_seen_at, flush
+  def save_proposal(db, proposal, account_id):
+    # consts: None, False, 'pending', True
+    # names: query, Signal, filter_by, dedupe_key, one_or_none, symbol, direction, entry, stop_loss, take_profit, estimated_risk_cash, lot_size, signal_time, datetime, fromtimestamp, expires_at, timezone, utc, add, flush
+  def apply_decision(db, signal_id, action, now):
+    # consts: None, 'Signal not found.', 'pending', 'Only a pending signal can be approved or rejected.', 'approve', 'This signal has expired. Scan the market again.', 'approved', 'rejected', 'local_user', 'signal_', 'signal', False
+    # names: get, Signal, LookupError, status, ValueError, expires_at, add, AuditLog, str, id, commit, refresh
+  def ensure_default_strategy(db):
+    # consts: None, 0, 1, True
+    # names: app.models, Strategy, app.strategy.defaults, SETUP_NAME, default_parameters, query, filter_by, one_or_none, add, commit, refresh
+  def reset_default_strategy(db):
+    # consts: None, 0, 1, True
+    # names: app.strategy.defaults, SETUP_NAME, default_parameters, ensure_default_strategy, name, parameters, int, version, enabled, commit, refresh
+  def save_strategy_parameters(db, parameters):
+    # consts: None, 1
+    # names: ensure_default_strategy, parameters, int, version, commit, refresh
+  def strategy_dict(row):
+    # consts: None, 'desk_uses', 'saved'
+    # names: id, name, version, enabled, parameters, created_at, isoformat, get
+  def saved_limits(db):
+    # consts: 'The row the desk trades with. Missing storage falls back to the code numbers.', 0, None, 'max_stop_pips', 1, 'max_trades_per_day'
+    # names: app.strategy.defaults, SETUP_NAME, default_parameters, query, Strategy, filter_by, one_or_none, isinstance, parameters, dict, float, TypeError, ValueError, max, int, round
+  def save_backtest(db, report):
+    # consts: None, 'symbol', 'source'
+    # names: BacktestRun, add, commit, refresh, id
+  def list_signals(db, limit):
+    # consts: None
+    # names: query, Signal, order_by, id, desc, limit, all
+  def list_backtests(db, limit):
+    # consts: None
+    # names: query, BacktestRun, order_by, id, desc, limit, all
+  def signal_dict(row):
+    # consts: None, 'submitted', False
+    # names: id, symbol, direction, float, entry_price, stop_loss, take_profit, lot_size, estimated_risk, status, bar_time, expires_at, int, timestamp, created_at, isoformat, order_ticket
+  def mark_submitted(db, proposal, account, result):
+    # consts: None, 'submitted', 'price', 'stop_loss', 'take_profit', 'volume', 'estimated_risk', 'ticket', 'local_user', 'demo_order_sent', 'signal', True, False
+    # names: upsert_account, query, Signal, filter_by, dedupe_key, one_or_none, save_proposal, id, status, entry_price, stop_loss, take_profit, lot_size, estimated_risk, get, order_ticket, add, AuditLog, str, commit, refresh

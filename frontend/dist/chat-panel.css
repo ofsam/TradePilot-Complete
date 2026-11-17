@@ -1,0 +1,21 @@
+.tp-chat-nav{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:9px;color:#91a4bc;background:transparent;border:0;width:100%;text-align:left}
+.tp-chat-nav:hover,.tp-chat-nav.active{background:#162236;color:#e7edf6}
+.tp-chat-nav svg{width:18px;height:18px;flex-shrink:0}
+.tp-chat-drawer{position:fixed;top:0;right:0;width:min(420px,100vw);height:100vh;background:#0e1727;border-left:1px solid #1d2a3d;z-index:80;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .22s ease;box-shadow:0 0 40px #0008}
+.tp-chat-drawer.open{transform:translateX(0)}
+.tp-chat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 16px 12px;border-bottom:1px solid #1d2a3d}
+.tp-chat-head b{font:700 15px Space Grotesk,DM Sans,sans-serif}
+.tp-chat-head small{display:block;margin-top:3px;color:#7e91aa;font-size:11px}
+.tp-chat-head button{background:#162236;border:1px solid #2a3b55;color:#e7edf6;border-radius:8px;padding:6px 10px}
+.tp-chat-log{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.tp-chat-bubble{max-width:92%;padding:10px 12px;border-radius:12px;font-size:13px;line-height:1.45;white-space:pre-wrap}
+.tp-chat-bubble.user{align-self:flex-end;background:#1d3a5c;color:#e7edf6}
+.tp-chat-bubble.bot{align-self:flex-start;background:#151f31;border:1px solid #243449;color:#d5deea}
+.tp-chat-bubble .meta{display:block;margin-top:6px;color:#7e91aa;font-size:10px}
+.tp-chat-form{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px;border-top:1px solid #1d2a3d}
+.tp-chat-form textarea{resize:none;min-height:54px;border-radius:10px;border:1px solid #2a3b55;background:#0b1220;color:#e7edf6;padding:10px;font:inherit}
+.tp-chat-form button{border:0;border-radius:10px;background:linear-gradient(145deg,#d7a94b,#9d7130);color:#111827;font-weight:700;padding:0 16px}
+.tp-chat-form button:disabled{opacity:.55}
+.tp-chat-backdrop{position:fixed;inset:0;background:#0006;z-index:70;opacity:0;pointer-events:none;transition:opacity .2s}
+.tp-chat-backdrop.open{opacity:1;pointer-events:auto}
+@media (max-width:720px){.tp-chat-drawer{width:100vw}}

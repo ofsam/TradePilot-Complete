@@ -1,0 +1,33 @@
+def <module>():
+  # consts: 0, 'User', 'TradingAccount', 'Strategy', 'Signal', 'AuditLog', 'Notice', 'LoginCode', 'AuthSession', 'BacktestRun', None
+  # names: datetime, timezone, sqlalchemy, Boolean, DateTime, ForeignKey, Integer, Numeric, String, UniqueConstraint, sqlalchemy.dialects.postgresql, JSONB, sqlalchemy.orm, Mapped, mapped_column, app.db, Base, utc_now, User, TradingAccount, Strategy, Signal, AuditLog, Notice, LoginCode, AuthSession, BacktestRun
+  def utc_now():
+    # consts: None
+    # names: datetime, now, timezone, utc
+  def User():
+    # consts: 'User', 'users', True, 'id', 320, 'email', 32, 'owner', 'role', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, email, str, role, DateTime, utc_now, created_at, datetime
+  def TradingAccount():
+    # consts: 'TradingAccount', 'trading_accounts', 'broker_server', 'login_ref', 'uq_account_server_login', True, 'id', 100, 'label', 160, 80, 32, 'environment', 12, None, 'currency', 'is_enabled', 'last_seen_at', 'created_at'
+    # names: __name__, __module__, __qualname__, __tablename__, UniqueConstraint, __table_args__, mapped_column, Integer, id, Mapped, int, __annotations__, String, label, str, broker_server, login_ref, environment, currency, Boolean, is_enabled, bool, DateTime, last_seen_at, datetime, utc_now, created_at
+  def Strategy():
+    # consts: 'Strategy', 'strategies', True, 'id', 120, 'name', 1, 'version', False, 'enabled', 'parameters', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, name, str, version, Boolean, enabled, bool, JSONB, dict, parameters, DateTime, utc_now, created_at, datetime
+  def Signal():
+    # consts: 'Signal', 'signals', 'dedupe_key', 'uq_signal_dedupe_key', True, 'id', 'trading_accounts.id', None, 'account_id', 'strategies.id', 'strategy_id', 32, 'symbol', 8, 'direction', 18, 'entry_price', 'stop_loss', 'take_profit', 4, 'estimated_risk', 'lot_size', 'bar_time', 24, 'pending', 'status', 240, 'order_ticket', 'expires_at', 'created_at'
+    # names: __name__, __module__, __qualname__, __tablename__, UniqueConstraint, __table_args__, mapped_column, Integer, id, Mapped, int, __annotations__, ForeignKey, account_id, strategy_id, String, symbol, str, direction, Numeric, entry_price, float, stop_loss, take_profit, estimated_risk, lot_size, bar_time, status, dedupe_key, order_ticket, DateTime, expires_at, datetime, utc_now, created_at
+  def AuditLog():
+    # consts: 'AuditLog', 'audit_logs', True, 'id', 160, 'actor', 120, 'action', 80, 'entity_type', 100, None, 'entity_id', 'details', 'created_at'
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, actor, str, action, entity_type, entity_id, JSONB, dict, details, DateTime, utc_now, created_at, datetime
+  def Notice():
+    # consts: 'Notice', 'notices', 'dedupe_key', 'uq_notice_dedupe_key', True, 'id', 24, 'kind', 160, 'title', 600, 'body', 240, False, 'read', 'emailed', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, UniqueConstraint, __table_args__, mapped_column, Integer, id, Mapped, int, __annotations__, String, kind, str, title, body, dedupe_key, Boolean, read, bool, emailed, DateTime, utc_now, created_at, datetime
+  def LoginCode():
+    # consts: 'LoginCode', 'login_codes', True, 'id', 320, 'email', 16, 'purpose', 64, 'code_hash', 'expires_at', False, 'used', 0, 'attempts', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, email, str, purpose, code_hash, DateTime, expires_at, datetime, Boolean, used, bool, attempts, utc_now, created_at
+  def AuthSession():
+    # consts: 'AuthSession', 'auth_sessions', True, 'id', 320, 'email', 16, 'purpose', 64, 'token_hash', 'expires_at', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, email, str, purpose, token_hash, DateTime, expires_at, datetime, utc_now, created_at
+  def BacktestRun():
+    # consts: 'BacktestRun', 'backtest_runs', True, 'id', 32, 'symbol', 16, 'source', 'summary', 'created_at', None
+    # names: __name__, __module__, __qualname__, __tablename__, mapped_column, Integer, id, Mapped, int, __annotations__, String, symbol, str, source, JSONB, summary, dict, DateTime, utc_now, created_at, datetime

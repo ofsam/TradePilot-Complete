@@ -1,0 +1,13 @@
+TradePilot Full Package
+=======================
+
+Build on this PC:
+  Make-FullPackage.bat
+  Make-FullPackage.bat with-env   ← includes your .env for your other computers
+
+Output:
+  share\TradePilot-Full-Portable.zip
+
+On the other PC: unzip → read START-HERE.txt → TradePilot.bat
+
+Needs MetaTrader 5 on that PC. Python is bundled in the full package.

@@ -1,0 +1,82 @@
+def <module>():
+  # consts: 0, None, 'Africa/Accra', '_connected', 'This symbol is already at the saved entry count for this Ghana day.', 'This symbol already has an open position, so a new setup waits.', 'Sizing at the saved risk is below the broker minimum lot, so the setup was skipped.', 'The stop is at or beyond the saved pip limit, so this H1 setup is invalid.', 'The terminal did not provide a usable tick value or lot step.', 'return', 'kind', 'title', 'body', 'dedupe_key', 30, 'limit', 'notice_id', 'symbol', 'reason', 'environment', 'direction', 'volume', 'price', 'ticket', 'detail', 'entry', 'connected', 'NEW SETUP', 'ORDER', 'RISK', 'TERMINAL', 'RECORDS', 'TRADEPILOT', 'address', 'row', 'value'
+  # names: logging, smtplib, datetime, email.message, EmailMessage, html, escape, zoneinfo, ZoneInfo, sqlalchemy.exc, IntegrityError, app.config, settings, app.db, SessionLocal, app.models, Notice, getLogger, __name__, log, ACCRA, _connected, bool, __annotations__, SKIP_REASONS, list, str, recipients, email_ready, publish, int, dict, list_notices, mark_read, mark_all_read, note_signal, note_skip, float, note_order, note_order_failed, note_break_even, note_storage, watch_connection, remind_email_setup, _KIND_LABEL, _html_notice, mail_ready, send_to, _send_email, _deliver, _retry_unsent, _rewrite, _mark_emailed, _set_read, _dict, _price
+  def recipients():
+    # consts: None, ','
+    # names: settings, notify_email, split
+    def <listcomp>(.0):
+      # names: strip
+  def email_ready():
+    # consts: None
+    # names: bool, recipients, settings, smtp_host, smtp_user, smtp_password
+  def publish(kind, title, body, dedupe_key):
+    # consts: 'Store one notice and email it the first time this key is seen.', None, False, 24, 160, 600, 240, 'Notice was not stored.', True
+    # names: SessionLocal, Notice, add, commit, IntegrityError, rollback, _retry_unsent, close, Exception, log, warning, _send_email, _mark_emailed
+  def list_notices(limit):
+    # consts: None, 'Notices could not be read.', True
+    # names: SessionLocal, query, Notice, order_by, id, desc, limit, all, close, Exception, log, warning
+    def <listcomp>(.0):
+      # names: _dict
+  def mark_read(notice_id):
+    # consts: None
+    # names: _set_read, Notice, id
+  def mark_all_read():
+    # consts: None
+    # names: _set_read
+  def note_signal(proposal):
+    # consts: None, 'signal', 'New ', ' ', ' setup', 'Entry ', ', stop ', ', target ', '.', 'signal:'
+    # names: publish, symbol, direction, _price, entry, stop_loss, take_profit, dedupe_key
+  def note_skip(symbol, reason):
+    # consts: None, 'risk', ' setup skipped', 'skip:', ':'
+    # names: SKIP_REASONS, datetime, now, ACCRA, date, isoformat, publish
+  def note_order(symbol, environment, direction, volume, price, ticket, dedupe_key):
+    # consts: None, 'live', 'Live', 'Demo', 'order', ' ', ' sent', 'Ticket ', ', ', ' lots at ', '.', 'order:'
+    # names: publish, _price
+  def note_order_failed(symbol, detail, dedupe_key):
+    # consts: None, 'order', ' order was not sent', 600, 'order-failed:'
+    # names: publish
+  def note_break_even(symbol, direction, ticket, entry):
+    # consts: None, 'order', ' stop moved to break even', 'Ticket ', ' ', ' reached 3.5R. Stop is now ', '.', 'break-even:'
+    # names: publish, _price
+  def note_storage(title, body, dedupe_key):
+    # consts: None, 'storage', 'storage:'
+    # names: publish
+  def watch_connection(connected, detail):
+    # consts: None, '%Y-%m-%dT%H', 'connection', 'MT5 is connected again', 'The terminal is available.', 'mt5:up:', 'MT5 disconnected', 'The terminal is not available. Auto cannot send until it returns.', 'mt5:down:'
+    # names: _connected, datetime, now, ACCRA, strftime, publish
+  def remind_email_setup():
+    # consts: None, 'setup', 'Trade mail is on', 'Notices go to your inbox from TradePilot. A new setup, a sent order, a blocked order, and a lost terminal each send one email.', 'setup:mail-ready', 'Brevo mail is not finished', 'The server is smtp-relay.brevo.com. In Brevo open SMTP & API, copy the SMTP login and SMTP key, verify a sender, then fill SMTP_USER, SMTP_PASSWORD, SMTP_FROM, and NOTIFY_EMAIL in backend/.env.', 'setup:brevo-missing'
+    # names: email_ready, publish
+  def _html_notice(kind, title, body):
+    # consts: None, 'NOTICE', '\n', '<br>', '<!DOCTYPE html>\n<html>\n<body style="margin:0;padding:0;background:#0b1220;">\n  <div style="display:none;max-height:0;overflow:hidden;">', '</div>\n  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b1220;padding:28px 12px;">\n    <tr><td align="center">\n      <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:560px;max-width:560px;background:#0e1727;border:1px solid #1d2a3d;border-radius:16px;">\n        <tr><td style="padding:26px 32px 22px;">\n          <table role="presentation" cellpadding="0" cellspacing="0">\n            <tr>\n              <td width="44" height="44" align="center" valign="middle" bgcolor="#d7a94b" style="width:44px;height:44px;background:#d7a94b;border-radius:12px;">\n                <table role="presentation" cellpadding="0" cellspacing="0">\n                  <tr>\n                    <td valign="bottom" style="padding:0 2px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="4" height="12" bgcolor="#111827" style="width:4px;height:12px;background:#111827;font-size:0;line-height:0;">&nbsp;</td></tr></table></td>\n                    <td valign="bottom" style="padding:0 2px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="4" height="20" bgcolor="#111827" style="width:4px;height:20px;background:#111827;font-size:0;line-height:0;">&nbsp;</td></tr></table></td>\n                    <td valign="bottom" style="padding:0 2px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="4" height="15" bgcolor="#111827" style="width:4px;height:15px;background:#111827;font-size:0;line-height:0;">&nbsp;</td></tr></table></td>\n                  </tr>\n                </table>\n              </td>\n              <td style="padding-left:14px;">\n                <div style="color:#e7edf6;font:700 18px Georgia,\'Times New Roman\',serif;letter-spacing:0.2px;">TradePilot</div>\n                <div style="margin-top:3px;color:#7e91aa;font:700 10px Georgia,serif;letter-spacing:1.6px;">MT5 CONTROL CENTER</div>\n              </td>\n            </tr>\n          </table>\n        </td></tr>\n        <tr><td height="3" bgcolor="#d7a94b" style="height:3px;background:#d7a94b;font-size:0;line-height:0;">&nbsp;</td></tr>\n        <tr><td style="padding:28px 32px 8px;">\n          <div style="color:#d7a94b;font:700 11px Georgia,serif;letter-spacing:1.8px;">', '</div>\n          <div style="margin:12px 0 0;color:#e7edf6;font:700 24px Georgia,\'Times New Roman\',serif;line-height:1.3;">', '</div>\n        </td></tr>\n        <tr><td style="padding:14px 32px 30px;color:#c5d0e0;font:16px Georgia,\'Times New Roman\',serif;line-height:1.65;">', '</td></tr>\n        <tr><td style="padding:16px 32px 24px;border-top:1px solid #1d2a3d;color:#7e91aa;font:12px Georgia,serif;line-height:1.5;">\n          Sent from your TradePilot desk on this computer. Contest accounts stay blocked.\n        </td></tr>\n      </table>\n    </td></tr>\n  </table>\n</body>\n</html>'
+    # names: escape, _KIND_LABEL, get, replace
+  def mail_ready():
+    # consts: None
+    # names: bool, settings, smtp_host, smtp_user, smtp_password
+  def send_to(address, title, body):
+    # consts: 'One mailbox. Login codes go only to the address that was typed.', False, 'setup'
+    # names: mail_ready, _deliver
+  def _send_email(kind, title, body):
+    # consts: None, False, ', '
+    # names: email_ready, _deliver, join, recipients
+  def _deliver(address, kind, title, body):
+    # consts: None, 'TradePilot: ', 180, 'Subject', 'From', 'To', '\n\n', '\n', 'html', 465, 10, True, 'Email was not sent.', False
+    # names: EmailMessage, settings, smtp_from, smtp_user, set_content, add_alternative, _html_notice, smtp_port, smtplib, SMTP_SSL, smtp_host, login, smtp_password, send_message, SMTP, starttls, Exception, log, warning
+  def _retry_unsent(dedupe_key, kind, title, body):
+    # consts: 'A failed send stays unsent. The next time this key is published, try once more.', None, 240, False
+    # names: email_ready, SessionLocal, query, Notice, filter_by, one_or_none, emailed, Exception, close, _send_email, _mark_emailed, _rewrite
+  def _rewrite(dedupe_key, title, body):
+    # consts: None, 240, 160, 600
+    # names: SessionLocal, query, Notice, filter_by, one_or_none, title, body, commit, Exception, rollback, close
+  def _mark_emailed(dedupe_key):
+    # consts: None, 240, True
+    # names: SessionLocal, query, Notice, filter_by, one_or_none, emailed, commit, Exception, rollback, close
+  def _set_read(criterion):
+    # consts: None, False, True, 'Notice was not marked read.'
+    # names: SessionLocal, query, Notice, filter, update, read, commit, close, Exception, rollback, log, warning
+  def _dict(row):
+    # consts: None
+    # names: id, kind, title, body, read, emailed, created_at, isoformat
+  def _price(value):
+    # consts: None, '.5f', '0', '.'
+    # names: float, rstrip

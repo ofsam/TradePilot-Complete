@@ -1,0 +1,39 @@
+def <module>():
+  # consts: 'EURUSD and USDCAD auto scan. It runs in this process, so the window can close.', 0, None, 15, 1, 'data', 'desk_mode.json', '_attempted', False, 'return', 'mode', 'attempted', 'symbol', 'key'
+  # names: __doc__, json, logging, sys, threading, pathlib, Path, getLogger, __name__, log, SYMBOLS, INTERVAL_SECONDS, __file__, resolve, parents, _PATH, Lock, _lock, set, _attempted, str, __annotations__, _started, Event, _stop, get_mode, set_mode, dict, state, start, stop, run_cycle, protect_open_trades, _loop, _status, _connect, _scan, bool, _execute
+  def get_mode():
+    # consts: None, 'utf-8-sig', 'mode', 'manual'
+    # names: json, loads, _PATH, read_text, get, OSError, JSONDecodeError, AttributeError
+  def set_mode(mode):
+    # consts: None, 'Mode must be manual or auto.', True, 'mode', 'utf-8'
+    # names: ValueError, _PATH, parent, mkdir, write_text, json, dumps
+  def state():
+    # consts: None
+    # names: get_mode, list, SYMBOLS, _started
+  def start():
+    # consts: None, 'pytest', True, 'tradepilot-desk'
+    # names: sys, modules, _lock, _started, threading, Thread, _loop, start
+  def stop():
+    # consts: None
+    # names: _stop, set
+  def run_cycle(status, connect, scan, execute, attempted):
+    # consts: None, 'connected', 'environment', 'proposal', 'dedupe_key'
+    # names: get, SYMBOLS, add
+  def protect_open_trades():
+    # consts: 'Break even at 3.5R on open TradePilot tickets, even when Auto is off.', 0, None, 'connected', 'environment', 'Break-even check skipped: %s', 'symbol', 'direction', 'ticket', 'entry'
+    # names: app, notify, app.mt5.adapter, MT5Unavailable, mt5_adapter, app.mt5.execution, ExecutionRefused, status, get, connect, Exception, protect_open_positions, log, info, note_break_even
+  def _loop():
+    # consts: None, 'Break-even protect failed.', True, 'auto', 'Desk scan failed.'
+    # names: _stop, is_set, protect_open_trades, Exception, log, warning, get_mode, run_cycle, _status, _connect, _scan, _execute, _attempted, wait, INTERVAL_SECONDS
+  def _status():
+    # consts: None, 0, False, 'unknown'
+    # names: app.mt5.adapter, MT5Unavailable, mt5_adapter, status, str
+  def _connect():
+    # consts: None, 0
+    # names: app.mt5.adapter, mt5_adapter, connect
+  def _scan(symbol):
+    # consts: None, 0, 'Desk scan skipped %s: %s'
+    # names: fastapi, HTTPException, app.routers.strategy, ScanBody, scan, log, info, detail
+  def _execute(symbol, key):
+    # consts: None, 0, True, 'Desk order was not sent for %s: %s', False
+    # names: fastapi, HTTPException, app.routers.strategy, ExecuteBody, execute, log, info, detail

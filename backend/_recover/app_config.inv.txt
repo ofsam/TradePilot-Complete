@@ -1,0 +1,20 @@
+def <module>():
+  # consts: 0, 'Settings', 'database_url', 'supabase_url', 'password', 'return', 'url', None
+  # names: urllib.parse, quote_plus, pydantic_settings, BaseSettings, SettingsConfigDict, Settings, str, resolve_database_url, supabase_project_ref, settings
+  def Settings():
+    # consts: 'Settings', 'MT5 Trading Control Center', 'app_name', '/api/v1', 'api_prefix', '', 'database_url', 'supabase_url', 'supabase_db_password', 'notify_email', 'smtp_host', 587, 'smtp_port', 'smtp_user', 'smtp_password', 'smtp_from', 'http://localhost:5173,http://127.0.0.1:5173', 'cors_origins', 'mt5_terminal_path', '.env', 'ignore', 'return', None
+    # names: __name__, __module__, __qualname__, app_name, str, __annotations__, api_prefix, database_url, supabase_url, supabase_db_password, notify_email, smtp_host, smtp_port, int, smtp_user, smtp_password, smtp_from, cors_origins, mt5_terminal_path, SettingsConfigDict, model_config, property, list, allowed_origins, resolved_database_url
+    def allowed_origins(self):
+      # consts: None, ','
+      # names: cors_origins, split
+      def <listcomp>(.0):
+        # names: strip
+    def resolved_database_url(self):
+      # consts: None
+      # names: resolve_database_url, database_url, supabase_url, supabase_db_password
+  def resolve_database_url(database_url, supabase_url, password):
+    # consts: 'Prefer a full connection string. Otherwise build the Supabase direct database URL.', '', 'postgres://', 'postgresql://', None, 'postgresql+psycopg://', 'postgresql+psycopg://postgres:', '@db.', '.supabase.co:5432/postgres'
+    # names: strip, startswith, len, supabase_project_ref, quote_plus
+  def supabase_project_ref(url):
+    # consts: None, '', '/', 0, '.supabase.co', '.'
+    # names: strip, rstrip, startswith, len, split, endswith

@@ -1,0 +1,27 @@
+TradePilot Full Package — START HERE
+===================================
+
+This zip is built to run on another Windows PC without installing Python.
+
+Requirements on the other PC
+- Windows 10/11 (64-bit)
+- MetaTrader 5 installed and logged in
+- Internet for Supabase / OpenAI if you use those features
+
+Run
+1. Unzip to a folder (example: Desktop\TradePilot)
+2. Double-click TradePilot.bat
+3. If backend\.env is missing, Setup creates one — put your DATABASE_URL in it
+4. Open TradePilot (or http://127.0.0.1:8000/)
+
+If you see "Supabase is not available"
+- backend\.env is missing or DATABASE_URL is empty/wrong
+- Use the package built with: Make-FullPackage.bat with-env
+  (only for your own PCs — that zip contains secrets)
+
+Live trading
+- Keep EXECUTION_ENABLED=false until you want Auto to send real orders
+- Algo Trading must be enabled in MT5
+
+Do not share
+- Your real backend\.env on the public internet

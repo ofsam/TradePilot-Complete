@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: mt5-control-center-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mt5_control_center
+      POSTGRES_USER: mt5app
+      POSTGRES_PASSWORD: change_this_local_password
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - mt5_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mt5app -d mt5_control_center"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  mt5_postgres_data:

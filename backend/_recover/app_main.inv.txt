@@ -1,0 +1,99 @@
+def <module>():
+  # consts: 0, None, '^[A-Za-z0-9 ._()#-]{2,32}$', 'app', '0.2.0', True, '*', 'return', 'header', 'CodeRequest', 'CodeCheck', 'SetupBody', '/auth/request', 'body', '/auth/verify', '/auth/me', 'authorization', '/strategy/setup', '/strategy/setup/reset', '/health', '/mt5/status', '/notices', '/notices/read-all', '/notices/{notice_id}/read', 'notice_id', 'DeskMode', '/desk', '/desk/mode', '/mt5/connect', '/mt5/disconnect', '/mt5/account', '/mt5/symbols', 'XAUUSD', 'symbols', '/mt5/tick', 'symbol', '/mt5/candles', 'H1', 48, 10
+  # names: logging, re, contextlib, asynccontextmanager, pathlib, Path, fastapi, FastAPI, Header, HTTPException, Query, fastapi.middleware.cors, CORSMiddleware, fastapi.staticfiles, StaticFiles, pydantic, BaseModel, sqlalchemy, text, app.config, settings, app, auth, desk, notify, app.db, engine, prepare_database, models, app.mt5.adapter, MT5Unavailable, mt5_adapter, app.routers.strategy, router, strategy_router, getLogger, __name__, log, compile, _SYMBOL, lifespan, app_name, add_middleware, allowed_origins, include_router, api_prefix, _seed_strategy, str, _bearer, CodeRequest, CodeCheck, SetupBody, _auth_db, post, auth_request, auth_verify, get, auth_me, _setup_email, strategy_setup, strategy_save, strategy_reset, unavailable, health, status, notices, read_notices, int, read_notice, DeskMode, desk_state, desk_mode, connect, disconnect, account, list, symbols, tick, market_candles, positions, database_status, __file__, resolve, parents, _DIST, is_file, mount
+  def lifespan(app):
+    # consts: None, 'Supabase is unavailable. Signal history will not be stored.', True
+    # names: prepare_database, notify, remind_email_setup, _seed_strategy, Exception, log, warning, desk, start, stop
+  def _seed_strategy():
+    # consts: None, 0, 'The default strategy was not stored.', True
+    # names: app.strategy, store, open_session, ensure_default_strategy, Exception, rollback, log, warning, close
+  def _bearer(header):
+    # consts: None, 'bearer ', '', 7
+    # names: lower, startswith, strip
+  def CodeRequest():
+    # consts: 'CodeRequest', 'email', 'login', 'purpose', None
+    # names: __name__, __module__, __qualname__, str, __annotations__, purpose
+  def CodeCheck():
+    # consts: 'CodeCheck', 'email', 'code', 'login', 'purpose', None
+    # names: __name__, __module__, __qualname__, str, __annotations__, purpose
+  def SetupBody():
+    # consts: 'SetupBody', 'parameters', None
+    # names: __name__, __module__, __qualname__, dict, __annotations__
+  def _auth_db():
+    # consts: None, 0, 503, 'Supabase is not available.'
+    # names: app.strategy, store, open_session, HTTPException
+  def auth_request(body):
+    # consts: None, 422, 'Enter a real email address.', 'Choose login or setup.', 429, 503, True
+    # names: auth, normalize_email, email, valid_email, HTTPException, purpose, _auth_db, issue_code, notify, send_to, RateLimited, str, MailFailed, close
+  def auth_verify(body):
+    # consts: None, 401
+    # names: auth, normalize_email, email, _auth_db, verify_code, purpose, code, strip, ValueError, HTTPException, str, close
+  def auth_me(authorization):
+    # consts: None, 'login', 401, 'Log in with the code from your email.', 'email'
+    # names: _auth_db, auth, read_session, _bearer, close, HTTPException
+  def _setup_email(authorization):
+    # consts: None, 'setup', 401, 'Enter the setup code from your email.'
+    # names: _auth_db, auth, read_session, _bearer, close, HTTPException
+  def strategy_setup(authorization):
+    # consts: None, 0, 503, 'Supabase is not available.'
+    # names: _setup_email, app.strategy, store, open_session, HTTPException, strategy_dict, ensure_default_strategy, close
+  def strategy_save(body, authorization):
+    # consts: None, 0, 422, 503, 'Supabase is not available.'
+    # names: _setup_email, app.strategy.defaults, normalize_parameters, app.strategy, store, parameters, ValueError, HTTPException, str, open_session, strategy_dict, save_strategy_parameters, close
+  def strategy_reset(authorization):
+    # consts: None, 0, 503, 'Supabase is not available.'
+    # names: _setup_email, app.strategy, store, open_session, HTTPException, strategy_dict, reset_default_strategy, close
+  def unavailable(exc):
+    # consts: None, 503
+    # names: HTTPException, str
+  def health():
+    # consts: None, 'ok', False, 'read_only', 'supabase', 'off'
+    # names: engine
+  def status():
+    # consts: None, False, 'read_only', 'unknown', 'connected', 'message', ''
+    # names: mt5_adapter, status, MT5Unavailable, str, notify, watch_connection, bool, get
+  def notices():
+    # consts: None
+    # names: notify, list_notices, sum
+    def <genexpr>(.0):
+      # consts: 'read', 1, None
+      # names: 
+  def read_notices():
+    # consts: None, 'ok'
+    # names: notify, mark_all_read
+  def read_notice(notice_id):
+    # consts: None, 'ok'
+    # names: notify, mark_read
+  def DeskMode():
+    # consts: 'DeskMode', 'mode', None
+    # names: __name__, __module__, __qualname__, str, __annotations__
+  def desk_state():
+    # consts: None
+    # names: desk, state
+  def desk_mode(body):
+    # consts: None, 422, 'Mode must be manual or auto.', 'auto', 'environment', 'unknown', 409, 'Auto stays off until a demo or live account is connected.'
+    # names: mode, HTTPException, mt5_adapter, status, MT5Unavailable, get, desk, set_mode, state
+  def connect():
+    # consts: None
+    # names: mt5_adapter, connect, MT5Unavailable, unavailable
+  def disconnect():
+    # consts: None
+    # names: mt5_adapter, disconnect
+  def account():
+    # consts: None
+    # names: mt5_adapter, status, MT5Unavailable, unavailable
+  def symbols(symbols):
+    # consts: None, 'items'
+    # names: mt5_adapter, symbols, MT5Unavailable, unavailable
+  def tick(symbol):
+    # consts: None
+    # names: mt5_adapter, tick, MT5Unavailable, unavailable
+  def market_candles(symbol, timeframe, count):
+    # consts: None, 422, 'Enter a broker symbol such as XAUUSD.', 'Timeframe must be H1 or H4.'
+    # names: _SYMBOL, fullmatch, strip, HTTPException, mt5_adapter, rates, MT5Unavailable, unavailable
+  def positions():
+    # consts: None, 'items'
+    # names: mt5_adapter, positions, MT5Unavailable, unavailable
+  def database_status():
+    # consts: None, 'SELECT 1', 'connected', True, 503, 'Database unavailable'
+    # names: engine, connect, execute, text, Exception, HTTPException

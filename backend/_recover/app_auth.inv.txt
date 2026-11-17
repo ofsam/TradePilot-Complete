@@ -1,0 +1,27 @@
+def <module>():
+  # consts: 'Email codes for opening the desk and for opening strategy setup.', 0, None, 10, 7, 15, 5, 'login', 'setup', 'RateLimited', 'MailFailed', 'value', 'return', 'material', 'db', 'email', 'purpose', 'code', 'token'
+  # names: __doc__, hashlib, secrets, datetime, timedelta, timezone, sqlalchemy.orm, Session, app.models, AuthSession, LoginCode, CODE_MINUTES, LOGIN_DAYS, SETUP_MINUTES, MAX_ATTEMPTS, PURPOSES, RuntimeError, RateLimited, MailFailed, str, normalize_email, bool, valid_email, _hash, issue_code, verify_code, read_session
+  def RateLimited():
+    # consts: 'RateLimited', None
+    # names: __name__, __module__, __qualname__
+  def MailFailed():
+    # consts: 'MailFailed', None
+    # names: __name__, __module__, __qualname__
+  def normalize_email(value):
+    # consts: None
+    # names: strip, lower
+  def valid_email(value):
+    # consts: None, 6, 320, '@', 1, False, '.', ' '
+    # names: len, count, split, bool
+  def _hash(material):
+    # consts: None
+    # names: hashlib, sha256, encode, hexdigest
+  def issue_code(db, email, purpose, send):
+    # consts: None, 'Choose login or setup.', 60, 'Wait a minute before asking for another code.', False, True, 10000, '04d', ':', 0, 'login', 'Your login code', 'Your strategy setup code', 'Your TradePilot code is ', '. It expires in ', ' minutes and works once.', 'The code email was not sent.'
+    # names: PURPOSES, ValueError, datetime, now, timezone, utc, query, LoginCode, filter, email, purpose, created_at, timedelta, count, RateLimited, used, is_, all, secrets, randbelow, _hash, CODE_MINUTES, add, commit, delete, MailFailed
+  def verify_code(db, email, purpose, code):
+    # consts: None, 4, 'Enter the 4-digit code from the email.', False, 'That code is expired. Ask for a new one.', 1, True, 'Too many tries. Ask for a new code.', ':', 'That code does not match.', 32, 'setup', 24, 60
+    # names: PURPOSES, isdigit, len, ValueError, datetime, now, timezone, utc, query, LoginCode, filter, email, purpose, used, is_, order_by, id, desc, first, expires_at, attempts, MAX_ATTEMPTS, commit, code_hash, _hash, secrets, token_urlsafe, SETUP_MINUTES, LOGIN_DAYS, add, AuthSession, timedelta
+  def read_session(db, token, purpose):
+    # consts: None
+    # names: query, AuthSession, filter_by, _hash, one_or_none, expires_at, datetime, now, timezone, utc, email

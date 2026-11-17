@@ -1,0 +1,15 @@
+def <module>():
+  # consts: 0, None, 'Base', 'url', 'return', True, 2, 1, False
+  # names: logging, sqlalchemy, create_engine, text, sqlalchemy.orm, DeclarativeBase, sessionmaker, app.config, settings, getLogger, __name__, log, Base, str, dict, _connect_args, resolved_database_url, _url, engine, SessionLocal, prepare_database, get_db
+  def Base():
+    # consts: 'Base', None
+    # names: __name__, __module__, __qualname__
+  def _connect_args(url):
+    # consts: None, 'connect_timeout', 8, 'supabase.co', 'supabase.com', 'require', 'sslmode', ':6543/', ':6543?', 'prepare_threshold'
+    # names: 
+  def prepare_database():
+    # consts: None, 'Supabase is not configured. Signal history will not be stored.', 'Schema step skipped: %s', True
+    # names: engine, log, warning, Base, metadata, create_all, begin, execute, text, Exception
+  def get_db():
+    # consts: None, 'Supabase is not configured'
+    # names: SessionLocal, RuntimeError, close

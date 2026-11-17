@@ -1,0 +1,86 @@
+def <module>():
+  # consts: 0, None, '^[A-Za-z0-9 ._()#-]{2,32}$', 'ScanBody', 'ExecuteBody', 'BacktestBody', 'report', 'return', 'value', 'label', 'body', 'symbol', 'rows', 'info', '/strategy/rules', '/portfolio', '/strategy/execute', '/strategy/scan', '/strategy/backtest', '/signals', '/signals/{signal_id}/approve', 'signal_id', '/signals/{signal_id}/reject', 'action', '/strategy/backtests'
+  # names: re, time, datetime, timedelta, timezone, fastapi, APIRouter, HTTPException, pydantic, BaseModel, Field, app, notify, app.mt5.adapter, MT5Unavailable, mt5_adapter, app.mt5.execution, ExecutionRefused, app.strategy.agent, AGENT_RULES_SOURCE, evaluate_agent, app.strategy.candles, Candle, app.strategy.engine, ACCRA, RULES, RULES_SOURCE, run_backtest, scan_latest, app.strategy.risk, SymbolSpec, app.strategy.sample, run_sample, app.strategy, store, router, compile, _SYMBOL, ScanBody, ExecuteBody, BacktestBody, dict, list, _equity_curve, _backtest_limits, _saved_limits, str, parse_utc_day, tuple, float, history_window, int, sent_today, clean_symbol, candles_from_rows, spec_from_info, get, rules, portfolio, post, execute, scan, backtest, signals, approve, reject, _decide, backtests
+  def ScanBody():
+    # consts: 'ScanBody', 'XAUUSD', 'symbol', None
+    # names: __name__, __module__, __qualname__, symbol, str, __annotations__
+  def ExecuteBody():
+    # consts: 'ExecuteBody', 'XAUUSD', 'symbol', 3, 240, 'dedupe_key', None
+    # names: __name__, __module__, __qualname__, symbol, str, __annotations__, Field, dedupe_key
+  def BacktestBody():
+    # consts: 'BacktestBody', 'sample', 'source', 'XAUUSD', 'symbol', 400, 80, 3000, 'count', None, 0, 50, 'spread', 10000, 1000000000, 'starting_equity', 'from_date', 'to_date', 'order_block', 'rules'
+    # names: __name__, __module__, __qualname__, source, str, __annotations__, symbol, Field, count, int, spread, float, starting_equity, from_date, to_date, rules
+  def _equity_curve(report):
+    # consts: None, 'starting_equity', 0, 'from_time', 2, 'trades', 'cash_pnl', 'status', 'exit_time', 'ending_equity', 1, -1, 'equity', 'to_time'
+    # names: float, get, round, append, len
+  def _backtest_limits():
+    # consts: None
+    # names: store, open_session, _saved_limits, close
+  def _saved_limits(db):
+    # consts: None, 'risk_fraction', 'reward_multiple', 'max_stop_pips', 'max_trades_per_day'
+    # names: store, saved_limits, float, int
+  def parse_utc_day(value, label):
+    # consts: None, 422, 'Choose a ', ' date.', '%Y-%m-%d', 'Use dates as YYYY-MM-DD.'
+    # names: HTTPException, datetime, strptime, replace, timezone, utc, ValueError
+  def history_window(body):
+    # consts: None, 'start', 'end', 422, 'The end date is before the start date.', 365, 'Choose a range of 365 days or less.', 0, 'The start date is in the future.', 1
+    # names: parse_utc_day, from_date, to_date, HTTPException, days, datetime, now, timezone, utc, replace, timedelta, time, timestamp
+  def sent_today(symbol, db):
+    # consts: 'Broker deals for this symbol today. Unsent saved setups do not use up the two entries.', None, 0
+    # names: mt5_adapter, entries_today, MT5Unavailable, ExecutionRefused, store, count_sent_signals, datetime, now, ACCRA, date
+  def clean_symbol(symbol):
+    # consts: None, 422, 'Enter a broker symbol such as XAUUSD.'
+    # names: strip, _SYMBOL, fullmatch, HTTPException
+  def candles_from_rows(rows):
+    # consts: None
+    # names: 
+    def <listcomp>(.0):
+      # consts: 'time', 'open', 'high', 'low', 'close'
+      # names: Candle, int, float
+  def spec_from_info(info):
+    # consts: None, 'available', False, 'point', 'trade_tick_size', 'trade_tick_value', 'volume_min', 'volume_max', 'volume_step', 'digits'
+    # names: get, SymbolSpec, float, int, KeyError, TypeError, ValueError, valid
+  def rules():
+    # consts: None, False, 0.02, 5, 2, 0.0, 'Africa/Accra'
+    # names: RULES_SOURCE, RULES
+  def portfolio():
+    # consts: None, 503
+    # names: mt5_adapter, portfolio, MT5Unavailable, HTTPException, str
+  def execute(body):
+    # consts: None, 400, 200, 503, 'symbol', 'available', ' is not available on this terminal.', 'public_candles', 'This terminal does not list ', ', so the order cannot be sent. The quote is only for reading.', 404, 'account', 'equity', 'balance', 0, 'positions', 'h4', 'h1', 'tick', 'bid', 'ask', 409, 'The setup changed. Scan again before sending.', 'The order was sent, but Supabase did not keep the record.', 'storage_error', 'Supabase did not keep the order', 'environment', '', 'volume', 'price', 'ticket', 'live', 'Live order sent to MT5.', 'Demo order sent to MT5.', 'message', False, 'auto_execution'
+    # names: clean_symbol, symbol, mt5_adapter, snapshot, MT5Unavailable, HTTPException, str, get, float, any, store, open_session, sent_today, _saved_limits, scan_latest, candles_from_rows, spec_from_info, time, close, proposal, dedupe_key, send_demo_order, direction, stop_loss, entry, stop_distance, expires_at, ExecutionRefused, notify, note_order_failed, mark_submitted, Exception, rollback, note_storage, note_order
+    def <genexpr>(.0):
+      # consts: 'symbol', None
+      # names: str, upper
+  def scan(body):
+    # consts: None, 400, 200, 503, 'symbol', 'available', 'public_candles', 404, ' is not available on this terminal.', 'tick', 'account', 'equity', 'balance', 0, 'positions', 'h4', 'h1', 'bid', 'ask', False, 'The setup was found, but Supabase did not keep it.', ' had a setup, but the record was not saved.', 'max_trades_per_day'
+    # names: clean_symbol, symbol, mt5_adapter, snapshot, MT5Unavailable, HTTPException, str, get, float, spec_from_info, any, store, open_session, sent_today, _saved_limits, scan_latest, candles_from_rows, time, proposal, upsert_account, save_proposal, id, commit, signal_dict, Exception, rollback, notify, note_storage, close, note_signal, note_skip, skip_reason, RULES_SOURCE, bias, checks, as_dict
+    def <genexpr>(.0):
+      # consts: 'symbol', None
+      # names: str, upper
+  def backtest(body):
+    # consts: None, 422, 'Backtest source must be sample or mt5.', 'Backtest rules must be order_block or agent.', 'sample', 'This sample is a built-in price fixture with one planned win and one planned loss. It checks the engine. It is not market performance.', 'disclaimer', 0, 'H1', 'H4', 20, 503, 3, 'That range has fewer than 3 closed H1 candles. Pick a longer window or a period the terminal has downloaded.', 'request', 0.0, 'ask', 'bid', 'public_candles', 'coinbase', 'tick', 'mt5', 'agent', 'requested_from', 'requested_to', 'agent reclaim model', 'H4 bias and H1 level-retest rules', 'The live bot still uses the H4 bias and H1 level-retest rules.', 'These are the H4 bias and H1 level-retest rules. Risk, the target multiple, the pip limit, and the Ghana-day count come from the saved setup. A setup is saved only from 08:00 to 17:00 in London or New York.', 'This replays ', ' through ', ' UTC with the ', '. H4 candles from the 20 days before the start are context only. It is research, not a forecast, and it is not evidence of an 80% win rate. ', ' ', ' candles are the Coinbase USD market because this terminal does not list the symbol. One pip is one dollar. This terminal has no lot size, so return and drawdown use 2% of equity times the trade result. No order is sent.', 'bars_h1', 30, 'Fewer than 30 closed H1 bars were available.', 'warning', 'equity_curve'
+    # names: source, strip, lower, rules, HTTPException, clean_symbol, symbol, run_sample, starting_equity, history_window, mt5_adapter, symbols, tick, rates_range, timedelta, MT5Unavailable, str, int, timestamp, len, spread, max, float, get, bool, run_backtest, candles_from_rows, spec_from_info, evaluate_agent, AGENT_RULES_SOURCE, RULES_SOURCE, _backtest_limits, as_dict, from_date, to_date, _equity_curve, store, open_session, save_backtest, Exception, rollback, close
+    def <listcomp>(.0):
+      # consts: 'time'
+      # names: int
+    def <listcomp>(.0):
+      # consts: 'time'
+      # names: int
+  def signals():
+    # consts: None, False, True
+    # names: store, open_session, list_signals, close
+    def <listcomp>(.0):
+      # names: store, signal_dict
+  def approve(signal_id):
+    # consts: None, 'approve'
+    # names: _decide
+  def reject(signal_id):
+    # consts: None, 'reject'
+    # names: _decide
+  def _decide(signal_id, action):
+    # consts: None, 503, 'Supabase is unavailable, so the decision was not stored.', 404, 409, 'Decision stored. No order was sent to MT5.', 'message'
+    # names: store, open_session, HTTPException, apply_decision, datetime, now, timezone, utc, signal_dict, LookupError, str, ValueError, close
+  def backtests():
+    # consts: None, False, 'id', 'symbol', 'source', 'created_at', 'summary', 'disclaimer', 'trades', 'skipped', 'starting_equity', 'ending_equity', 'spread', 'spread_source', 'rules_source', 'requested_from', 'requested_to', 'equity_curve', 'warning', 'bars_h1', 'bars_h4', True
+    # names: store, open_session, list_backtests, summary, append, id, symbol, source, created_at, isoformat, get, close

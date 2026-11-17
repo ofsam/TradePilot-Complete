@@ -1,0 +1,9 @@
+def <module>():
+  # consts: 'The strategy written in the engine. Reset copies this record back.', 0, 'H4 bias H1 retest', 'return', 'incoming', None
+  # names: __doc__, app.strategy.engine, MAX_STOP_PIPS, RULES, RULES_SOURCE, TARGET_R, app.strategy.risk, MAX_TRADES_PER_DAY, RISK_FRACTION, SETUP_NAME, dict, default_parameters, normalize_parameters
+  def default_parameters():
+    # consts: None, 8, 17, 'London', 'New York', 'saved'
+    # names: RULES_SOURCE, RISK_FRACTION, TARGET_R, MAX_STOP_PIPS, MAX_TRADES_PER_DAY, list, RULES
+  def normalize_parameters(incoming):
+    # consts: 'Store the numbers that were typed. A risk of 2 means 2 percent.', 'Use numbers for the setup limits.', None, 'risk_fraction', 1, 100, 0, 'Use a number above zero.', 6, 'saved', 'desk_uses'
+    # names: dict, default_parameters, float, TypeError, ValueError, int, round

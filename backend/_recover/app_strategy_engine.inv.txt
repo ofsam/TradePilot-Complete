@@ -1,0 +1,185 @@
+def <module>():
+  # consts: 0, None, 'h4_bias_h1_retest', 0.0, 5.0, 3.5, 100, 'Africa/Accra', 'Europe/London', 'America/New_York', True, 'Proposal', 'Evaluation', 'TradeRecord', 'SkipRecord', 'BacktestReport', 'candle', 'return', 'direction', 'stop', 'take_profit', 'trade', 'bar', 'digits', 'break_even_r', 'price_move', 'spec', 'lots', 'equity', 'risk_fraction', 'timestamp', 'close_time', 'candles', 'now', 'h4', 'h1_close_time', 'h1_close', 'forming_high', 'forming_low', 'h1'
+  # names: math, collections.abc, Callable, dataclasses, asdict, dataclass, field, datetime, timezone, zoneinfo, ZoneInfo, app.strategy.candles, Candle, H1_SECONDS, H4_SECONDS, closed_candles, app.strategy.risk, MAX_TRADES_PER_DAY, REWARD_MULTIPLE, RISK_FRACTION, SymbolSpec, round_price, size_position, RULES_SOURCE, MIN_STOP_DISTANCE, TARGET_R, BREAK_EVEN_R, MAX_STOP_PIPS, ACCRA, LONDON, NEW_YORK, RULES, Proposal, Evaluation, TradeRecord, SkipRecord, BacktestReport, bool, _finite_candle, str, float, tuple, _exit_on_candle, int, _apply_break_even, _cash, _apply_planned_cash, _day_key, _session_open, list, _opened_candles, _bias_at, _forming_span, pip_size, dict, _make_setup, _forming_open, _span, _next_bias, _levels, _touch_price, _retested, _simulate, _book, _trade_shot, summarize, run_backtest, scan_latest, KEEP_SKIP_REASONS
+  def Proposal():
+    # consts: 'Proposal', 'symbol', 'direction', 'signal_time', 'entry', 'stop_loss', 'take_profit', 'stop_distance', None, 'lot_size', 'estimated_risk_cash', 'capped', 'dedupe_key', 'expires_at', 'return'
+    # names: __name__, __module__, __qualname__, str, __annotations__, int, float, bool, dict, as_dict
+    def as_dict(self):
+      # consts: None
+      # names: asdict
+  def Evaluation():
+    # consts: 'Evaluation', 'bias', None, 'proposal', 'skip_reason', 'signal_time', 'checks', 'levels'
+    # names: __name__, __module__, __qualname__, str, __annotations__, Proposal, int, field, dict, checks, list, levels
+  def TradeRecord():
+    # consts: 'TradeRecord', 'direction', 'signal_time', 'entry_time', None, 'exit_time', 'entry', 'stop_loss', 'take_profit', 'exit_price', 'lot_size', 'estimated_risk_cash', 'cash_pnl', 'r_multiple', 'status', 'exit_reason', 'initial_stop', False, 'break_even', 'shot', 'return'
+    # names: __name__, __module__, __qualname__, str, __annotations__, int, float, initial_stop, break_even, bool, shot, dict, as_dict
+    def as_dict(self):
+      # consts: None
+      # names: asdict
+  def SkipRecord():
+    # consts: 'SkipRecord', 'signal_time', 'reason', None, 'direction', 'return'
+    # names: __name__, __module__, __qualname__, int, __annotations__, str, direction, dict, as_dict
+    def as_dict(self):
+      # consts: None
+      # names: asdict
+  def BacktestReport():
+    # consts: 'BacktestReport', 'symbol', 'source', 'spread', 'spread_source', 'starting_equity', None, 'ending_equity', 'from_time', 'to_time', 'bars_h1', 'bars_h4', 'rules_source', 'execution_enabled', 'summary', 'trades', 'skipped', 'return'
+    # names: __name__, __module__, __qualname__, str, __annotations__, float, int, bool, dict, field, list, trades, TradeRecord, skipped, SkipRecord, as_dict
+    def as_dict(self):
+      # consts: None, 'trades', 'skipped'
+      # names: asdict, trades, skipped
+      def <listcomp>(.0):
+        # names: as_dict
+      def <listcomp>(.0):
+        # names: as_dict
+  def _finite_candle(candle):
+    # consts: None
+    # names: all, open, high, low, close
+    def <genexpr>(.0):
+      # consts: None
+      # names: math, isfinite
+  def _exit_on_candle(direction, stop, take_profit, candle):
+    # consts: None, 'buy', 'both_hit_stop_first', 'stop_loss', 'take_profit'
+    # names: low, high
+  def _apply_break_even(trade, bar, digits, break_even_r):
+    # consts: 'If the bar reaches 3.5R without also hitting the original stop, move the stop to entry.', 0, None, 'buy', True
+    # names: break_even, initial_stop, stop_loss, abs, entry, math, isfinite, round_price, direction, high, low
+  def _cash(price_move, spec, lots):
+    # consts: None
+    # names: trade_tick_size, trade_tick_value
+  def _apply_planned_cash(trade, equity, risk_fraction):
+    # consts: 'Mark cash from the saved risk fraction times R when the terminal has no lot spec.', None, 0, 2
+    # names: cash_pnl, r_multiple, math, isfinite, round, estimated_risk_cash
+  def _day_key(timestamp):
+    # consts: None
+    # names: datetime, fromtimestamp, ACCRA, date, isoformat
+  def _session_open(close_time):
+    # consts: None, 8, 17, True, False
+    # names: datetime, fromtimestamp, timezone, utc, LONDON, NEW_YORK, astimezone, hour
+  def _opened_candles(candles, now):
+    # consts: None
+    # names: _finite_candle, time, append
+  def _bias_at(h4, h1_close_time, h1_close, forming_high, forming_low):
+    # consts: None, 2, -2, -1, 0, 1
+    # names: len, time, H4_SECONDS, close, high, low, float
+    def <listcomp>(.0):
+      # names: time, _finite_candle
+  def _forming_span(h4, h1, bar_open):
+    # consts: None, -1
+    # names: time, max, min
+    def <listcomp>(.0):
+      # names: time, _finite_candle
+    def <listcomp>(.0):
+      # names: time, _finite_candle
+    def <genexpr>(.0):
+      # consts: None
+      # names: high
+    def <genexpr>(.0):
+      # consts: None
+      # names: low
+  def pip_size(spec, symbol):
+    # consts: 'One pip. Metals and 3- or 5-digit quotes use ten points. A 4-digit FX quote uses one point.', None, 0, 'XAU', 'XAG', 10
+    # names: app.market.crypto, pip_for_unlisted, point, upper, startswith, digits
+  def _make_setup(previous, candle, bias, close_time, spec, symbol, max_stop_pips):
+    # consts: None, 1, -1, 'invalid_symbol_spec', 'stop_100_pips', False
+    # names: close, high, float, low, pip_size, abs, _session_open, int, time
+  def _forming_open(as_of):
+    # consts: None
+    # names: H4_SECONDS
+  def _span(candles, start):
+    # consts: None
+    # names: max, min
+    def <listcomp>(.0):
+      # names: time, _finite_candle
+    def <genexpr>(.0):
+      # consts: None
+      # names: high
+    def <genexpr>(.0):
+      # consts: None
+      # names: low
+  def _next_bias(bias, closed_h4, closed_h1, as_of):
+    # consts: None, False, -1, 0, 2, -2, 1
+    # names: len, close, high, low, _span, _forming_open, _finite_candle, time
+    def <listcomp>(.0):
+      # names: _finite_candle
+  def _levels(setup, entry, stop, target):
+    # consts: None, 'H4 high', 'ref_high', 'H4 low', 'ref_low', 'Retest', 'level', 'Breakout high', 'candle2_high', 'Breakout low', 'candle2_low', 'Entry', 'Stop', 'Target'
+    # names: 
+  def _touch_price(setup, bar):
+    # consts: None, 'level', 'last_quote', 'direction', 1
+    # names: low, close, open, high
+  def _retested(setup, bar):
+    # consts: None, 'level', 'direction', 1
+    # names: open, low, high
+  def _simulate(higher, lower):
+    # consts: None, 0, 2, 1, 'direction', 'buy', 'sell', 'level', 'sl', 'limited_day', 'daily_limit', 'invalid_geometry', False, 'signal_time', 'setup_time', 'entry_time', 'exit_time', 'entry', 'stop_loss', 'take_profit', 'exit_price', 'lot_size', 'estimated_risk_cash', 'cash_pnl', 'r_multiple', 'status', 'open', 'exit_reason', 'initial_stop', 'break_even', 'last_quote', 'stop_100_pips', 'invalid_symbol_spec', 'ref_high', 'ref_low', 'unresolved'
+    # names: digits, set, enumerate, _finite_candle, time, H1_SECONDS, entry_time, _apply_break_even, _exit_on_candle, direction, stop_loss, take_profit, _book, _apply_planned_cash, _trade_shot, shot, append, cash_pnl, _retested, _day_key, round_price, float, get, SkipRecord, math, isfinite, size_position, error, _levels, TradeRecord, lots, cash_risk, round, _forming_span, _bias_at, close, _make_setup, add, isinstance, dict, signal_time, entry, lot_size, estimated_risk_cash
+  def _book(trade, exit_price, reason, exit_time, spec):
+    # consts: None, 'buy', 'loss', 0, 'win', 'scratch', 'stop_loss', 'break_even', 'direction', 'signal_time', 'entry_time', 'exit_time', 'entry', 'take_profit', 'exit_price', 'lot_size', 'estimated_risk_cash', 'cash_pnl', 'r_multiple', 8, 'status', 'exit_reason', 'initial_stop'
+    # names: direction, entry, initial_stop, stop_loss, abs, break_even, TradeRecord, signal_time, entry_time, take_profit, lot_size, estimated_risk_cash, _cash, round
+  def _trade_shot(candles, trade, levels):
+    # consts: None, 'Entry', 'Stop', 'Target', 6, 2, 20, -20
+    # names: entry, stop_loss, take_profit, isinstance, int, float, math, isfinite, append, signal_time, H1_SECONDS, exit_time, entry_time, max, len
+    def <listcomp>(.0):
+      # names: dict
+    def <setcomp>(.0):
+      # consts: 'name'
+      # names: get
+    def <listcomp>(.0):
+      # names: time
+    def <listcomp>(.0):
+      # names: time, open, high, low, close
+  def summarize(trades, skipped, reward_multiple, risk_fraction, max_trades_per_day):
+    # consts: None, 8, 0, 'loss', 1, 'win', 'trades', 'resolved_trades', 'wins', 'losses', 'scratches', 'unresolved', 'net_r', 'profit_factor_r', 4, 'max_consecutive_losses', 'skipped', 'win_rate', 'expectancy_r', 'average_win_r', 'average_loss_r', 'risk_fraction', 'reward_multiple', 'max_trades_per_day'
+    # names: round, sum, abs, status, max, len
+    def <listcomp>(.0):
+      # consts: None
+      # names: r_multiple
+    def <listcomp>(.0):
+      # consts: 'win'
+      # names: status
+    def <listcomp>(.0):
+      # consts: 'loss'
+      # names: status
+    def <listcomp>(.0):
+      # consts: 'scratch'
+      # names: status
+    def <genexpr>(.0):
+      # consts: 0, None
+      # names: r_multiple
+    def <genexpr>(.0):
+      # consts: 0, None
+      # names: r_multiple
+    def <genexpr>(.0):
+      # consts: 0, None
+      # names: r_multiple
+    def <genexpr>(.0):
+      # consts: 'unresolved', 1, None
+      # names: status
+    def <genexpr>(.0):
+      # consts: 0, None
+      # names: r_multiple
+    def <genexpr>(.0):
+      # consts: 0, None
+      # names: r_multiple
+  def run_backtest(h4, h1):
+    # consts: None, 4, 'risk_fraction', 'reward_multiple', 'max_stop_pips', 'max_trades_per_day', 2, 0, -1, False, 1, 'long', 'buy', 'short', 'sell', 'direction', 'signal_time', 'entry_time', 'exit_time', 'entry', 'stop_loss', 'take_profit', 'exit_price', 'lot_size', 'estimated_risk_cash', 'cash_pnl', 'r_multiple', 'status', 'open', 'exit_reason', 'initial_stop', 'break_even', 'unresolved'
+    # names: closed_candles, H1_SECONDS, _opened_candles, float, get, RISK_FRACTION, TARGET_R, MAX_STOP_PIPS, int, MAX_TRADES_PER_DAY, _simulate, any, sum, BacktestReport, round, time, len, summarize, digits, range, _apply_break_even, _exit_on_candle, direction, stop_loss, take_profit, _book, _apply_planned_cash, _trade_shot, shot, append, cash_pnl, datetime, fromtimestamp, timezone, utc, date, isoformat, evaluate_setup, open, low, high, proposal, skip_reason, signal_time, bias, SkipRecord, TradeRecord, entry, lot_size, estimated_risk_cash, list, levels, entry_time
+    def <listcomp>(.0):
+      # consts: None
+      # names: r_multiple, cash_pnl
+    def <genexpr>(.0):
+      # consts: None
+      # names: 
+    def <listcomp>(.0):
+      # consts: None
+      # names: r_multiple, cash_pnl
+    def <genexpr>(.0):
+      # consts: None
+      # names: 
+  def scan_latest():
+    # consts: None, 0.0, 'pending', 'bias', 1, 'long', -1, 'short', 'neutral', 'ref_high', 0, False, 2, 'not_enough_candles', 'neutral_bias', 'no_setup', 'position_open', 'setup_time', 'level', 'last_quote', 'direction', 'sl', 'buy', 'sell', 'waiting_retest', True, 'retest', 'invalid_geometry', 'stop_cap', 'daily_limit', ':', 6
+    # names: _opened_candles, closed_candles, H1_SECONDS, _simulate, len, Evaluation, time, reason, float, get, digits, round_price, math, isfinite, size_position, error, _day_key, int, Proposal, lots, cash_risk, round, capped, _levels
+    def <listcomp>(.0):
+      # consts: -1
+      # names: signal_time, time
